@@ -1,2 +1,4 @@
 Flask
-Gunicorn
+PyPDF2
+gTTS
+qrcode
