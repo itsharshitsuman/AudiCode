@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/pdf_to_audio')
 def pdf_to_audio():
