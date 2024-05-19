@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .spinner-border {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">AudiCode</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/pdf_to_audio">PDF to Audiobook</a></li>
+                <li class="nav-item"><a class="nav-link" href="/qr_generator">QR Code Generator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1>QR Code Generated</h1>
+        <img src="/static/qrcode.png" alt="QR Code">
+        <p>Type: {{ content_type }}</p>
+        <a href="{{ download_link }}" class="btn btn-secondary">Download QR Code</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AudiCode</p>
+    </footer>
+</body>
+</html>
